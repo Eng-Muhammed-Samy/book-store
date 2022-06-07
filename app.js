@@ -17,7 +17,8 @@ app.use("/admin", admin.router)
 app.use(shop)
 
 app.use((req, res, next) => {
-    res.status(404).sendFile(path.join(__dirname, "views", "not-found.html"))
+    // res.status(404).sendFile(path.join(__dirname, "views", "not-found.html"))
+    res.render('404', { title: "404 Error" })
 })
 
 app.listen(3000, () => console.log(`server running on port ${3000}`))

@@ -1,0 +1,9 @@
+extends layouts/main-layout.pug  
+block content
+		.container 
+			.row.justify-content-center.mt-5 
+				form.form.w-50(action="/admin/add-product", method="POST")
+					.mb-3 
+						label.form-label.text-light(for="title") Title 
+						input.form-control.bg-dark.text-light(type="text", name="title")#title
+					input.btn.btn-outline-light(type="submit", value="Add Product")

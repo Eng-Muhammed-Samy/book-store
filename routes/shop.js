@@ -6,7 +6,7 @@ const admin = require('./admin')
 
 router.get('/', (req, res, next) => {
     console.log(admin.products)
-    res.render('shop', { products: admin.products, title: "My Shop" })
+    res.render('shop', { products: admin.products, title: "My Shop", path: "/shop" })
 })
 
 
